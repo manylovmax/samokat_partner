@@ -321,7 +321,7 @@ class LogListPage extends React.Component {
                       <input type="text" className={"form-control " + (this.state.form.errors.filter(item => item.attribute == 'phone_number').length ? "is-invalid" : "is-valid") }
                        id="inputPhone" onChange={(e) => this.formOnChangePhone(e.target.value)} value={this.state.form.fields.phone_number}/>
                     </div>
-                    <div className="col-md-5">
+                    <div className="col-md-4">
                       <label for="inputSex" className="form-label">Пол</label>
                       <select name="sex" id="inputSex" className={"form-control " + (this.state.form.errors.filter(item => item.attribute == 'sex').length ? "is-invalid" : "is-valid") }
                       onChange={(e) => this.formOnChangeSex(e.target.value)} value={this.state.form.fields.sex}>
@@ -329,7 +329,7 @@ class LogListPage extends React.Component {
                         <option value="Женский">Женский</option>
                       </select>
                     </div>
-                    <div className="col-md-2">
+                    <div className="col-md-3">
                       <label for="inputAge" className="form-label">Возраст</label>
                       <input name="age" type="number" className={"form-control " + (this.state.form.errors.filter(item => item.attribute == 'age').length ? "is-invalid" : "is-valid") }
                        id="inputAge" onChange={(e) => this.formOnChangeAge(e.target.value)} value={this.state.form.fields.age}/>
@@ -349,7 +349,7 @@ class LogListPage extends React.Component {
                     <div className="col-12">
                       <div className="form-check">
                         <input name="confidentiality" className={"form-check-input " + (this.state.form.errors.filter(item => item.attribute == 'confidentiality').length ? "is-invalid" : "is-valid") }
-                         type="checkbox" id="confidentialityCheck" onChange={(e) => this.formOnChangeConfidentiality(e.target.value)} value={this.state.form.fields.confidentiality}/>
+                         type="checkbox" id="confidentialityCheck" onChange={(e) => this.formOnChangeConfidentiality(e.target.checked)} value={this.state.form.fields.confidentiality}/>
                         <label className="form-check-label" for="confidentialityCheck">
                           Вы даете согласие на обработку своих персональных данных в соответствии с <a href="confidentiality-policy">политикой конфиденциальности</a>
                           </label>
