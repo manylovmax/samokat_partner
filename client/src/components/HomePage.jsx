@@ -365,7 +365,7 @@ class LogListPage extends React.Component {
           </div>
         </div>
 
-        <div className="row justify-content-center">
+        <div id="calc" className="row justify-content-center">
           <div className="col-md-8">
             <div className="white-card invite-a-friend">
               <div className="row">
@@ -405,7 +405,7 @@ class LogListPage extends React.Component {
           </div>
         </div>
 
-        <div className="row justify-content-center">
+        <div id="faq" className="row justify-content-center">
           <div className="col-md-8">
             <div className="white-card invite-a-friend">
               <div className="row">
@@ -419,36 +419,108 @@ class LogListPage extends React.Component {
                     <div class="accordion-item">
                       <h2 class="accordion-header">
                         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                          Accordion Item #1
+                        Как формируется ставка за час работы?
                         </button>
                       </h2>
                       <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
                         <div class="accordion-body">
-                          <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                        Например СПБ стоимость за час работы на вело 215р+75р(доставка трех заказов за час) + 15р(бонус от компании партнера при работе более 50 часов в неделю) + 30р бонус за доставку арбузов (сезонный бонус) + 30р/час за погодные условия (дождь, снег, жара)+ бонус работы в вечерние часы (по соглавованию) + бонус за работу в выходные дни (по согласованию).
                         </div>
                       </div>
                     </div>
                     <div class="accordion-item">
                       <h2 class="accordion-header">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                          Accordion Item #2
+                          Можно  устроится на работу если мне нет 18 лет?
                         </button>
                       </h2>
                       <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                         <div class="accordion-body">
-                          <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                          По правилам партнера мы не можем Вас взять на работу если Вам нет 18 лет.  Мы будем Вас ждать когда исполниться 18 лет.
                         </div>
                       </div>
                     </div>
                     <div class="accordion-item">
                       <h2 class="accordion-header">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                          Accordion Item #3
+                          Как часто выплачивается денежное вознаграждение?
                         </button>
                       </h2>
                       <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                         <div class="accordion-body">
-                          <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                          Выплаты  проходят раз в неделю
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                          Для работы какой нужен телефон?
+                        </button>
+                      </h2>
+                      <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          Смартфон с операционной системой Android или iOS.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFour">
+                          Берете на работу девушек?
+                        </button>
+                      </h2>
+                      <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          Девушек на работу принимаем.  Нужно быть физически крепким человеком, так как заказ может весить  1кг - 2кг так и  20кг - 25 кг.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseFour">
+                          Можно работать без патента (граждане СНГ)? 
+                        </button>
+                      </h2>
+                      <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          Нет, для работы  курьером сотрудник должен иметь при себе действующий патент.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseFour">
+                          Можно работать без регистрации (градане СНГ)?
+                        </button>
+                      </h2>
+                      <div id="collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          Нет, для работы  курьером (сборщиком заказов) сотрудник должен иметь действующую регистрацию.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseFour">
+                          У меня нет Личной Медицинской Книжки, что делать?
+                        </button>
+                      </h2>
+                      <div id="collapseEight" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                         После прохождения стажировки мы вас направим для похождения необходимых врачей и сдачи необходимых анализов. Все затраты компания ООО "АМГ" возьмет на себя.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseFour">
+                          У меня нет велосипеда, я могу доставлять заказы пешком?
+                        </button>
+                      </h2>
+                      <div id="collapseNine" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          Да можете. Есть тарификация для пешего курьера.
                         </div>
                       </div>
                     </div>

@@ -15,10 +15,10 @@ export default function Navbar() {
                             <a className="nav-link" href="#advantages">Преимущества</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">Калькулятор дохода</a>
+                            <a className="nav-link" href="#calc">Калькулятор дохода</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">Ответы на вопросы</a>
+                            <a className="nav-link" href="#faq">Ответы на вопросы</a>
                         </li>
                         <li className="nav-item">
                             <a className="nav-link" href="#application-form">Оставить заявку</a>
