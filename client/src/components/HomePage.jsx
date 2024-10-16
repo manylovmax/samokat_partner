@@ -79,7 +79,12 @@ class LogListPage extends React.Component {
     // validate confidentiality
     if (!fields.confidentiality)
       errors.push({attribute: 'confidentiality', value: 'Необходимо принять политику конфиденциальности для отправки'})
-
+    // validate age
+    if (!fields.age)
+      errors.push({attribute: 'age', value: 'Необходимо ввести возраст'})
+    if (fields.age && Number(fields.age) < 18)
+      errors.push({attribute: 'age', value: 'Вам должно быть 18 лет или больше для сотрудничества'})
+    console.log(fields.age)
     return errors;
   }
 
@@ -210,6 +215,7 @@ class LogListPage extends React.Component {
                 <div className="card col-md-3 mb-3"><h4>Приведи друга, получи награду до 25000₽</h4></div>
                 <div className="card col-md-3 mb-3"><h4>Нет штрафов</h4></div>
                 <div className="card col-md-3 mb-3"><h4>Зона ожидания внутри даркстора</h4></div>
+                <div className="card col-md-3 mb-3"><h4>Страховка на время доставок</h4></div>
               </div>
               <div className="row justify-content-center">
                 <div className="card col-md-3 mb-3"><h4>Возможность выбрать адрес для работы</h4></div>
@@ -300,6 +306,11 @@ class LogListPage extends React.Component {
                       <label for="inputName" className="form-label">Фамилия, имя, отчество</label>
                       <input name="name" type="text" className={"form-control " + (this.state.form.errors.filter(item => item.attribute == 'name').length ? "is-invalid" : "is-valid") }
                        id="inputName" onChange={(e) => this.formOnChangeName(e.target.value)} value={this.state.form.fields.name}/>
+                      <div class="invalid-feedback">
+                        {this.state.form.errors.filter(item => item.attribute == 'name').map((item, key) => (
+                          <div key={key}>{item.value}</div>
+                        ))}
+                      </div>
                     </div>
                     <div className="col-md-6">
                       <label for="inputCity" className="form-label">Ваш город</label>
@@ -320,6 +331,11 @@ class LogListPage extends React.Component {
                       <label for="inputPhone" className="form-label">Номер телефона</label>
                       <input type="text" className={"form-control " + (this.state.form.errors.filter(item => item.attribute == 'phone_number').length ? "is-invalid" : "is-valid") }
                        id="inputPhone" onChange={(e) => this.formOnChangePhone(e.target.value)} value={this.state.form.fields.phone_number}/>
+                       <div class="invalid-feedback">
+                         {this.state.form.errors.filter(item => item.attribute == 'phone_number').map((item, key) => (
+                           <div key={key}>{item.value}</div>
+                         ))}
+                       </div>
                     </div>
                     <div className="col-md-4">
                       <label for="inputSex" className="form-label">Пол</label>
@@ -333,6 +349,11 @@ class LogListPage extends React.Component {
                       <label for="inputAge" className="form-label">Возраст</label>
                       <input name="age" type="number" className={"form-control " + (this.state.form.errors.filter(item => item.attribute == 'age').length ? "is-invalid" : "is-valid") }
                        id="inputAge" onChange={(e) => this.formOnChangeAge(e.target.value)} value={this.state.form.fields.age}/>
+                       <div class="invalid-feedback">
+                         {this.state.form.errors.filter(item => item.attribute == 'age').map((item, key) => (
+                           <div key={key}>{item.value}</div>
+                         ))}
+                       </div>
                     </div>
                     <div className="col-md-5">
                       <label for="inputTransport" className="form-label">Тип транспорта</label>
@@ -356,9 +377,24 @@ class LogListPage extends React.Component {
                       </div>
                     </div>
                     <div className="col-12">
-                      <button disabled={ this.state.form.errors.length ? true : false} type="submit" className="btn btn-lg btn-primary">Оставить заявку</button>
+                      <button data-bs-toggle="modal" data-bs-target="#exampleModal" disabled={ this.state.form.errors.length ? true : false} type="submit" className="btn btn-lg btn-primary">Оставить заявку</button>
                     </div>
                   </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                  <h1>Спасибо за Ваш выбор! Наш сотрудник свяжется с Вами в ближайшее время.</h1>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
                 </div>
               </div>
             </div>
