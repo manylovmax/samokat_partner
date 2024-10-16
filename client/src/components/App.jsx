@@ -5,11 +5,16 @@ import {
  } from "react-router-dom";
 
 import HomePage from "./HomePage"
+import ConfidentialityPolicy from "./ConfidentialityPolicy"
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <HomePage />,
+  },
+  {
+    path: "/confidentiality-policy",
+    element: <ConfidentialityPolicy />,
   },
 ]);
 
