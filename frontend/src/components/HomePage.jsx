@@ -1,4 +1,5 @@
 import React from 'react';
+import axios from 'axios';
 
 import Navbar from "./Navbar"
 import Img1 from "../static/img/DSC05461-2.jpg"
@@ -90,7 +91,9 @@ class LogListPage extends React.Component {
 
   formOnSubmit(event) {
     event.preventDefault();
-
+    const form_fields_without_confidentiality = {...this.state.form.fields}
+    delete form_fields_without_confidentiality.confidentiality
+    axios.post('/send-email', form_fields_without_confidentiality);
   }
 
   formOnChangeName(name) {
