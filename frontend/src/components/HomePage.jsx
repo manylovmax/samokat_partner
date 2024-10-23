@@ -430,11 +430,11 @@ class LogListPage extends React.Component {
                       <option value="270">Псков</option>
                     </select>
 
-                    <label for="customRange1" class="form-label">Выберите, сколько часов в день вам удобно уделять доставке? {this.state.calc.hours}</label>
+                    <label for="customRange1" class="form-label">Выберите, сколько часов в день вам удобно уделять доставке. Выбрано: {this.state.calc.hours}.</label>
                     <input type="range" class="form-range" min="4" max="16" step="1" id="customRange1" onChange={(e) => this.calcChangeHours(e.target.value)} value={this.state.calc.hours}/>
 
-                    <label for="customRange2" class="form-label">Выберите, сколько дней в месяц вам хотелось бы сотрудничать? {this.state.calc.days}</label>
-                    <input type="range" class="form-range" min="1" max="28" step="1" id="customRange2" onChange={(e) => this.calcChangeDays(e.target.value)} value={this.state.calc.days}/>
+                    <label for="customRange2" class="form-label">Выберите, сколько дней в месяц вам хотелось бы сотрудничать. Выбрано: {this.state.calc.days}.</label>
+                    <input type="range" class="form-range" min="1" max="31" step="1" id="customRange2" onChange={(e) => this.calcChangeDays(e.target.value)} value={this.state.calc.days}/>
 
                     <div><h1>Ваш доход:<br/>{this.state.calc.sum}₽</h1><p>(ориентировочная сумма)</p></div>
                   </div>
