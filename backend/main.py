@@ -17,10 +17,10 @@ class FormFields(BaseModel):
 
 def send_smtp_mail(form_fields):
     port = 465  # For SSL
-    smtp_server = "smtp.gmail.com"
-    sender_email = "my@gmail.com"  # Enter your address
-    receiver_email = "your@gmail.com"  # Enter receiver address
-    password = "password"
+    smtp_server = "smtp.timeweb.ru"
+    sender_email = "samokat-robot@amg.net.ru"  # Enter your address
+    receiver_email = "hr@amg.net.ru"  # Enter receiver address
+    password = "r60787vE1"
     message = """\
     Subject: Анкета соискателя samokat
 
