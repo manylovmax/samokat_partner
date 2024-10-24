@@ -38,12 +38,7 @@ def send_smtp_mail(form_fields):
     from email.mime.text import MIMEText
 
     text_type = 'plain' # or 'html'
-    msg['Subject'] = 'Test Subject'
-    msg['From'] = sender_email
-    msg['To'] = receiver_email
     text = """\
-    Subject: Анкета соискателя samokat
-
     ФИО: {name}
     Город: {city}
     Номер телефона: {phone_number}
@@ -51,6 +46,9 @@ def send_smtp_mail(form_fields):
     Возраст: {age}
     Транспорт: {transport}""".format(**form_fields)
     msg = MIMEText(text, text_type, 'utf-8')
+    msg['Subject'] = 'Анкета соискателя samokat'
+    msg['From'] = sender_email
+    msg['To'] = receiver_email
 
     context = ssl.create_default_context()
     with smtplib.SMTP_SSL(smtp_server, port, context=context) as server:
