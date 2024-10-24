@@ -54,6 +54,6 @@ def send_smtp_mail(form_fields):
 
 @app.post("/send-email")
 async def send_email(form_fields: FormFields):
-    send_smtp_mail(form_fields)
+    send_smtp_mail(form_fields.model_dump())
     
     return Response(status_code=status.HTTP_204_NO_CONTENT)
