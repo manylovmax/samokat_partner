@@ -1,11 +1,25 @@
 from fastapi import FastAPI, Response, status
 from pydantic import BaseModel
+from fastapi.middleware.cors import CORSMiddleware
 
 # Import smtplib for the actual sending function
 import smtplib, ssl
 
 
+origins = [
+    "http://samokat.amg.net.ru",
+    "http://www.samokat.amg.net.ru",
+]
+
 app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 class FormFields(BaseModel):
     name: str
