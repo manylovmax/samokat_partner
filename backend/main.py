@@ -38,13 +38,12 @@ def send_smtp_mail(form_fields):
     from email.mime.text import MIMEText
 
     text_type = 'plain' # or 'html'
-    text = """\
-    ФИО: {name}
-    Город: {city}
-    Номер телефона: {phone_number}
-    Пол: {sex}
-    Возраст: {age}
-    Транспорт: {transport}""".format(**form_fields)
+    text = (f"ФИО: {form_fields['name']}\n"
+    f"Город: {form_fields['city']}\n"
+    f"Номер телефона: {form_fields['phone_number']}\n"
+    f"Пол: {form_fields['sex']}\n"
+    f"Возраст: {form_fields['age']}\n"
+    f"Транспорт: {form_fields['transport']}")
     msg = MIMEText(text, text_type, 'utf-8')
     msg['Subject'] = 'Анкета соискателя samokat'
     msg['From'] = sender_email
