@@ -35,7 +35,13 @@ def send_smtp_mail(form_fields):
     sender_email = "samokat-robot@amg.net.ru"  # Enter your address
     receiver_email = "hr@amg.net.ru"  # Enter receiver address
     password = "r60787vE1"
-    message = """\
+    from email.mime.text import MIMEText
+
+    text_type = 'plain' # or 'html'
+    msg['Subject'] = 'Test Subject'
+    msg['From'] = sender_email
+    msg['To'] = receiver_email
+    text = """\
     Subject: Анкета соискателя samokat
 
     ФИО: {name}
@@ -44,11 +50,12 @@ def send_smtp_mail(form_fields):
     Пол: {sex}
     Возраст: {age}
     Транспорт: {transport}""".format(**form_fields)
+    msg = MIMEText(text, text_type, 'utf-8')
 
     context = ssl.create_default_context()
     with smtplib.SMTP_SSL(smtp_server, port, context=context) as server:
         server.login(sender_email, password)
-        server.sendmail(sender_email, receiver_email, message)
+        server.send_message(msg)
 
 
 
