@@ -93,7 +93,7 @@ class LogListPage extends React.Component {
     event.preventDefault();
     const form_fields_without_confidentiality = {...this.state.form.fields}
     delete form_fields_without_confidentiality.confidentiality
-    axios.post('/send-email', form_fields_without_confidentiality);
+    axios.post('http://www.samokat.amg.net.ru:8000/send-email', form_fields_without_confidentiality);
   }
 
   formOnChangeName(name) {
