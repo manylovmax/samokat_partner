@@ -89,7 +89,7 @@ export default function ConfidentialityPolicy() {
                         <tr>
                             <th>Правовые основания</th>
                             <td class="legal-field">
-                              <span>Федеральный закон «Об информации, информационных технологиях и о защите информации» от 27.07.2006 N 149-ФЗ</span>
+                              <span>Согласие на обработку персональных данных</span>
                             </td>
                         </tr>
                         <tr>
