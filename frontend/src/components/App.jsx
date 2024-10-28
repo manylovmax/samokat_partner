@@ -13,7 +13,7 @@ const router = createBrowserRouter([
     element: <HomePage />,
   },
   {
-    path: "/confidentiality-policy",
+    path: "/privacy",
     element: <ConfidentialityPolicy />,
   },
 ]);

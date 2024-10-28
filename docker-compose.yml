@@ -2,7 +2,7 @@ services:
   server:
     restart: unless-stopped
     build:
-      context: ./server
+      context: ./backend
     ports:
       - 8000:8000
     depends_on:
@@ -11,6 +11,6 @@ services:
   client:
     restart: unless-stopped
     build:
-      context: ./client
+      context: ./frontend
     ports:
       - 80:80
