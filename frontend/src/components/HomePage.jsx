@@ -6,7 +6,7 @@ import Img1 from "../static/img/DSC05461-2.jpg"
 import Img2 from "../static/img/DSC00070-r.jpg"
 
 
-class LogListPage extends React.Component {
+class HomePage extends React.Component {
   state = {
     calc: {
       rate: 320,
@@ -575,4 +575,4 @@ class LogListPage extends React.Component {
   }
 }
 
-export default LogListPage;
+export default HomePage;
