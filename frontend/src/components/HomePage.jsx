@@ -475,7 +475,7 @@ class LogListPage extends React.Component {
                       </h2>
                       <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                         <div class="accordion-body">
-                          По правилам партнера мы не можем Вас взять на работу если Вам нет 18 лет.  Мы будем Вас ждать когда исполниться 18 лет.
+                          По правилам партнера мы не можем Вас взять на работу если Вам нет 18 лет.  Мы будем Вас ждать когда исполнится 18 лет.
                         </div>
                       </div>
                     </div>
