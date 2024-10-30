@@ -93,7 +93,7 @@ class HomePage extends React.Component {
     event.preventDefault();
     const form_fields_without_confidentiality = {...this.state.form.fields}
     delete form_fields_without_confidentiality.confidentiality
-    axios.post('http://www.samokat.amg.net.ru:4443/send-email', form_fields_without_confidentiality);
+    axios.post('https://www.samokat.amg.net.ru:4443/send-email', form_fields_without_confidentiality);
   }
 
   formOnChangeName(name) {
