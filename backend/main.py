@@ -7,8 +7,8 @@ import smtplib, ssl
 
 
 origins = [
-    "http://samokat.amg.net.ru",
-    "http://www.samokat.amg.net.ru",
+    "https://samokat.amg.net.ru",
+    "https://www.samokat.amg.net.ru",
 ]
 
 app = FastAPI()
