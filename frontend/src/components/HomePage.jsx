@@ -375,7 +375,7 @@ class HomePage extends React.Component {
                         <input name="confidentiality" className={"form-check-input " + (this.state.form.errors.filter(item => item.attribute == 'confidentiality').length ? "is-invalid" : "is-valid") }
                          type="checkbox" id="confidentialityCheck" onChange={(e) => this.formOnChangeConfidentiality(e.target.checked)} value={this.state.form.fields.confidentiality}/>
                         <label className="form-check-label" for="confidentialityCheck">
-                          Вы даете согласие на обработку своих персональных данных в соответствии с <a href="confidentiality-policy">политикой конфиденциальности</a>
+                          Вы даете согласие на обработку своих персональных данных в соответствии с <a href="/privacy">политикой конфиденциальности</a>
                           </label>
                       </div>
                     </div>
