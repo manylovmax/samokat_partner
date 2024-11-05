@@ -1,0 +1,12 @@
+[Unit]
+Description=A fastapi server for samokat partner website
+After=network.target
+
+[Service]
+User=www-data
+WorkingDirectory=/var/www/samokat_partner/backend
+ExecStart=/var/www/samokat_partner/backend/venv/bin/python3 /var/www/samokat_partner/backend/venv/bin/fastapi run
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
