@@ -1,10 +1,12 @@
+# Import smtplib for the actual email sending function
+import smtplib, ssl
+
 from fastapi import FastAPI, Response, status
 from pydantic import BaseModel
 from fastapi.middleware.cors import CORSMiddleware
 
-# Import smtplib for the actual sending function
-import smtplib, ssl
-
+from email.mime.text import MIMEText
+import config
 
 origins = [
     "https://samokat.amg.net.ru",
@@ -13,6 +15,7 @@ origins = [
 
 app = FastAPI()
 
+# CORS middleware для размещения бекенда и фронта на одном домене
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
@@ -34,8 +37,7 @@ def send_smtp_mail(form_fields):
     smtp_server = "smtp.timeweb.ru"
     sender_email = "samokat-robot@amg.net.ru"  # Enter your address
     receiver_email = "hr@amg.net.ru"  # Enter receiver address
-    password = "r60787vE1"
-    from email.mime.text import MIMEText
+    password = config.SMTP_PASSWORD
 
     text_type = 'plain' # or 'html'
     text = (f"ФИО: {form_fields['name']}\n"
