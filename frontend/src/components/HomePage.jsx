@@ -249,7 +249,7 @@ class HomePage extends React.Component {
 
         <div className="row justify-content-center">
           <div className="col-md-8">
-            <div className="white-card">
+            <div className="white-card p-2">
             <h1 className="text-center">Как стать курьером-партнером?</h1>
             <div className="row justify-content-center">
               <div className="col-md-6">
