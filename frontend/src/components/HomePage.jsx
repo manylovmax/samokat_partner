@@ -306,7 +306,7 @@ class HomePage extends React.Component {
                   <h1>Заполни анкету, чтобы стать курьером-партнёром</h1>
                   <form className="row g-3" onSubmit={e => this.formOnSubmit(e)}>
                     <div className="col-12">
-                      <label for="inputName" className="form-label">Фамилия, имя, отчество</label>
+                      <label htmlFor="inputName" className="form-label">Фамилия, имя, отчество</label>
                       <input name="name" type="text" className={"form-control " + (this.state.form.errors.filter(item => item.attribute == 'name').length ? "is-invalid" : "is-valid") }
                        id="inputName" onChange={(e) => this.formOnChangeName(e.target.value)} value={this.state.form.fields.name}/>
                       <div class="invalid-feedback">
@@ -316,7 +316,7 @@ class HomePage extends React.Component {
                       </div>
                     </div>
                     <div className="col-md-6">
-                      <label for="inputCity" className="form-label">Ваш город</label>
+                      <label htmlFor="inputCity" className="form-label">Ваш город</label>
                       <select name="city" id="inputCity" className={"form-select " + (this.state.form.errors.filter(item => item.attribute == 'city').length ? "is-invalid" : "is-valid") }
                        onChange={(e) => this.formOnChangeCity(e.target.value)} value={this.state.form.fields.city}>
                         <option value="Санкт-Петербург" selected>Санкт-Петербург</option>
@@ -331,7 +331,7 @@ class HomePage extends React.Component {
                       </select>
                     </div>
                     <div className="col-md-6">
-                      <label for="inputPhone" className="form-label">Номер телефона</label>
+                      <label htmlFor="inputPhone" className="form-label">Номер телефона</label>
                       <input type="text" className={"form-control " + (this.state.form.errors.filter(item => item.attribute == 'phone_number').length ? "is-invalid" : "is-valid") }
                        id="inputPhone" onChange={(e) => this.formOnChangePhone(e.target.value)} value={this.state.form.fields.phone_number}/>
                        <div class="invalid-feedback">
@@ -341,7 +341,7 @@ class HomePage extends React.Component {
                        </div>
                     </div>
                     <div className="col-md-4">
-                      <label for="inputSex" className="form-label">Пол</label>
+                      <label htmlFor="inputSex" className="form-label">Пол</label>
                       <select name="sex" id="inputSex" className={"form-control " + (this.state.form.errors.filter(item => item.attribute == 'sex').length ? "is-invalid" : "is-valid") }
                       onChange={(e) => this.formOnChangeSex(e.target.value)} value={this.state.form.fields.sex}>
                         <option value="Мужской" selected>Мужской</option>
@@ -349,7 +349,7 @@ class HomePage extends React.Component {
                       </select>
                     </div>
                     <div className="col-md-3">
-                      <label for="inputAge" className="form-label">Возраст</label>
+                      <label htmlFor="inputAge" className="form-label">Возраст</label>
                       <input name="age" type="number" className={"form-control " + (this.state.form.errors.filter(item => item.attribute == 'age').length ? "is-invalid" : "is-valid") }
                        id="inputAge" onChange={(e) => this.formOnChangeAge(e.target.value)} value={this.state.form.fields.age}/>
                        <div class="invalid-feedback">
@@ -359,7 +359,7 @@ class HomePage extends React.Component {
                        </div>
                     </div>
                     <div className="col-md-5">
-                      <label for="inputTransport" className="form-label">Тип транспорта</label>
+                      <label htmlFor="inputTransport" className="form-label">Тип транспорта</label>
                       <select name="transport" id="inputTransport"  className={"form-select " + (this.state.form.errors.filter(item => item.attribute == 'transport').length ? "is-invalid" : "is-valid") } 
                       onChange={(e) => this.formOnChangeTransport(e.target.value)} value={this.state.form.fields.transport}>
                         <option value="Велосипед" selected>Велосипед</option>
@@ -374,7 +374,7 @@ class HomePage extends React.Component {
                       <div className="form-check">
                         <input name="confidentiality" className={"form-check-input " + (this.state.form.errors.filter(item => item.attribute == 'confidentiality').length ? "is-invalid" : "is-valid") }
                          type="checkbox" id="confidentialityCheck" onChange={(e) => this.formOnChangeConfidentiality(e.target.checked)} value={this.state.form.fields.confidentiality}/>
-                        <label className="form-check-label" for="confidentialityCheck">
+                        <label className="form-check-label" htmlFor="confidentialityCheck">
                           Вы даете согласие на обработку своих персональных данных в соответствии с <a href="/privacy">политикой конфиденциальности</a>
                           </label>
                       </div>
@@ -417,7 +417,7 @@ class HomePage extends React.Component {
                 <div className="col-md-6">
                   <div className="d-flex align-content-center flex-wrap invite-a-friend__calc">
 
-                    <label for="inputCityCalc" className="form-label">Ваш город</label>
+                    <label htmlFor="inputCityCalc" className="form-label">Ваш город</label>
                     <select name="city" id="inputCityCalc" className="form-select" onChange={(e) => this.calcChangeCity(e.target.value)}>
                       <option value="320" selected>Санкт-Петербург</option>
                       <option value="320">Всеволожск</option>
@@ -430,10 +430,10 @@ class HomePage extends React.Component {
                       <option value="270">Псков</option>
                     </select>
 
-                    <label for="customRange1" class="form-label">Выберите, сколько часов в день вам удобно уделять доставке. Выбрано: {this.state.calc.hours}.</label>
+                    <label htmlFor="customRange1" class="form-label">Выберите, сколько часов в день вам удобно уделять доставке. Выбрано: {this.state.calc.hours}.</label>
                     <input type="range" class="form-range" min="4" max="16" step="1" id="customRange1" onChange={(e) => this.calcChangeHours(e.target.value)} value={this.state.calc.hours}/>
 
-                    <label for="customRange2" class="form-label">Выберите, сколько дней в месяц вам хотелось бы сотрудничать. Выбрано: {this.state.calc.days}.</label>
+                    <label htmlFor="customRange2" class="form-label">Выберите, сколько дней в месяц вам хотелось бы сотрудничать. Выбрано: {this.state.calc.days}.</label>
                     <input type="range" class="form-range" min="1" max="31" step="1" id="customRange2" onChange={(e) => this.calcChangeDays(e.target.value)} value={this.state.calc.days}/>
 
                     <div><h1>Ваш доход:<br/>{this.state.calc.sum}₽</h1><p>(ориентировочная сумма)</p></div>
