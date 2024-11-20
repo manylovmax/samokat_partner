@@ -570,6 +570,22 @@ class HomePage extends React.Component {
           </div>
         </div>
 
+
+        <div className="row justify-content-center">
+          <div className="col-md-8">
+            <div className="white-card p-2">
+              <h1 className="text-center">Контакты</h1>
+              <div className="row justify-content-center">
+                <div className="col-md-6">
+                  <p>Телефоны: +79214206288, +79214202963</p>
+                  <p>Email: info@amg.net.ru</p>
+                  <p>Адрес: Санкт-Петербург, ул. Елизаветинская, д. 17</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     );
   }
