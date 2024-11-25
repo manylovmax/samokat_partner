@@ -2,8 +2,8 @@ import React from 'react';
 import axios from 'axios';
 
 import Navbar from "./Navbar"
-import Img1 from "../static/img/DSC05461-2.jpg"
-import Img2 from "../static/img/DSC00070-r.jpg"
+import Img1 from "../assets/img/DSC05461-2.jpg"
+import Img2 from "../assets/img/DSC00070-r.jpg"
 
 
 class HomePage extends React.Component {
